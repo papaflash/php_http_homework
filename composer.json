@@ -8,7 +8,12 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "hflabs/dadata": "^24.4",
-        "guzzlehttp/guzzle": "^7.9"
+        "php-http/curl-client": "^2.3",
+        "nyholm/psr7": "^1.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
