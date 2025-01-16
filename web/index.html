@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <base href="/web/">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <title>Save user name</title>
+
+    <title>Clear FIO</title>
 </head>
 <body>
 <header>
 </header>
 
 <div class="form-container">
-    <div class="user-info-container">
-        <span class="container-span" id="span_for_name"></span>
-        <a id="link" href="../exit.php">Очистить сессию</a>
+    <div class="user-info-container" id="info_container">
+        <span class="container-span hidden" id="span_for_name"></span>
+        <a id="link" href="#" class="hidden">Новый запрос</a>
     </div>
-<<<<<<< HEAD
-  <form action="../dadata.php" method="post" id="frm">
-    <label class="label">Имя пользователя<input name="username" type="text" placeholder="Введите имя пользователя" maxlength="50"></label>
-    <button type="submit">Сохранить</button>
-=======
   <form method="post" id="frm" action="../dadata.php">
       <label class="label">Имя<input name="name" type="text" placeholder="Введите Имя" maxlength="50"></label>
       <label class="label">Отчество<input name="patronymic" type="text" placeholder="Введите Отчество" maxlength="50"></label>
@@ -28,12 +23,12 @@
       <input type="hidden" name="api_key" value="833f50904ce0c04b16be7b367ebc56c3179f74f6">
       <input type="hidden" name="secret_key" value="5d56c667e6562e44f3c9a98a446b1c2bbb95f1f6">
     <button type="submit">Стандартизировать</button>
->>>>>>> 326eb29 (added hidden fields. remove keys from dadata.php)
   </form>
 </div>
 
 <footer>
   Автор: <cite>Шагов Александр</cite>
 </footer>
+<script src="scripts.js"></script>
 </body>
 </html>

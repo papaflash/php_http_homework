@@ -8,4 +8,4 @@ if(isset($_SESSION['username'])) {
 }
 */
 //include('web/index.html');
-include('dadata.php');
+include('web/index.html');

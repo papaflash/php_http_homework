@@ -1,21 +1,28 @@
-function getUrlParameter(name) {
-    let param = new URLSearchParams(window.location.search);
-    return param.get(name);
-}
+const frm = document.getElementById('frm');
+const showFrmLink = document.getElementById("link");
+const textBlock = document.getElementById("span_for_name");
+let isClick = false;
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    let form = document.getElementById('frm');
-    let link = document.getElementById('link');
-    let username = getUrlParameter('username');
-    let span = document.getElementById('span_for_name');
-    if(username){
-        form.classList.add("hidden");
-        link.classList.remove("hidden");
-        span.classList.remove("hidden");
-        span.innerHTML = username + ", приветствую вас!";
-    }else {
-        form.classList.remove("hidden");
-        link.classList.add("hidden");
-        span.classList.add("hidden");
-    }
+frm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(frm);
+
+    const response = await fetch(frm.action, {
+        method: frm.method,
+        body: formData,
+    });
+
+    const resonseData = await response.text();
+    frm.classList.add("hidden");
+    textBlock.innerText = resonseData;
+    textBlock.classList.remove("hidden");
+    showFrmLink.classList.remove("hidden");
+});
+
+showFrmLink.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    showFrmLink.classList.add("hidden");
+    textBlock.classList.add("hidden");
+    frm.classList.remove("hidden");
 });
