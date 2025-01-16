@@ -8,6 +8,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "hflabs/dadata": "^24.4"
+        "hflabs/dadata": "^24.4",
+        "guzzlehttp/guzzle": "^7.9"
     }
 }
