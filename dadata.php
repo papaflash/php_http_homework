@@ -1,6 +1,5 @@
 <?php
-declare(strict_types=1);
-require('vendor/autoload.php');
+
 class TooManyRequests extends Exception
 {
 }
@@ -22,7 +21,7 @@ class Dadata
     /**
      * Initialize connection.
      */
-    public function init()
+    public function init():void
     {
         $this->handle = curl_init();
         curl_setopt($this->handle, CURLOPT_RETURNTRANSFER, 1);
@@ -112,7 +111,7 @@ class Dadata
     /**
      * Close connection.
      */
-    public function close()
+    public function close():void
     {
         curl_close($this->handle);
     }
