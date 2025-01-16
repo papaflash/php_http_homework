@@ -1,0 +1,13 @@
+{
+    "name": "alex/php_http_homework",
+    "authors": [
+        {
+            "name": "Alex Shagov",
+            "email": "shagov25@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hflabs/dadata": "^24.4"
+    }
+}

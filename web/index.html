@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <base href="/web/">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Save user name</title>
+</head>
+<body>
+<header>
+</header>
+
+<div class="form-container">
+    <div class="user-info-container">
+        <span class="container-span" id="span_for_name"></span>
+        <a id="link" href="../exit.php">Очистить сессию</a>
+    </div>
+  <form action="../dadata.php" method="post" id="frm">
+    <label class="label">Имя пользователя<input name="username" type="text" placeholder="Введите имя пользователя" maxlength="50"></label>
+    <button type="submit">Сохранить</button>
+  </form>
+</div>
+
+<footer>
+  Автор: <cite>Шагов Александр</cite>
+</footer>
+</body>
+</html>
