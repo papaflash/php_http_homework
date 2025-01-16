@@ -151,8 +151,8 @@ class Dadata
 // За счёт этого не создаются новые сетевые соединения на каждый запрос,
 // а переиспользуется существующее.
 
-$token = "833f50904ce0c04b16be7b367ebc56c3179f74f6";
-$secret = "5d56c667e6562e44f3c9a98a446b1c2bbb95f1f6";
+$token = $_POST["api_key"];
+$secret = $_POST["secret_key"];
 
 $dadata = new Dadata($token, $secret);
 $dadata->init();
