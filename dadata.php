@@ -157,12 +157,18 @@ $secret = "5d56c667e6562e44f3c9a98a446b1c2bbb95f1f6";
 $dadata = new Dadata($token, $secret);
 $dadata->init();
 
+echo $_POST["name"] . " " . $_POST["patronymic"] . " " . $_POST["surname"];
+
+/*
 // Стандартизовать ФИО
-//$result = $dadata->clean("name", $_POST['user_name']." ".$_POST['user_second_name']." ".$_POST['user_last_name']);
-$result = $dadata->clean("name","alex gray");
+$result = $dadata->clean("name", $_POST['user_name']." ".$_POST['user_second_name']." ".$_POST['user_last_name']);
 
 echo '<pre>';
 print_r($result);
 echo '</pre>';
 
 $dadata->close();
+
+*/
+
+
