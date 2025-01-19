@@ -6,7 +6,10 @@ let isClick = false;
 frm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(frm);
-
+    const patronomic = formData.querySelectorAll('[name="patronomic"]');
+    if(!patronomic){
+        patronomic.value = "";
+    }
     const response = await fetch(frm.action, {
         method: frm.method,
         body: formData,
