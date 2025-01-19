@@ -159,8 +159,7 @@ $dadata->init();
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
     if(isset($_POST["name"]) && isset($_POST['surname'])) {
-        $result = "ТЕСТ";
-        //$result = $dadata->clean("name", $_POST['name'] . " " . $_POST['patronymic'] . " " . $_POST['surname']);
+        $result = $dadata->clean("name", $_POST['name'] . " " . $_POST['patronymic'] . " " . $_POST['surname']);
     }else {
         $result = "Не заполнены данные полей!";
     }

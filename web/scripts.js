@@ -1,14 +1,13 @@
 const frm = document.getElementById('frm');
 const showFrmLink = document.getElementById("link");
 const textBlock = document.getElementById("span_for_name");
-let isClick = false;
 
 frm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(frm);
-    const patronomic = formData.querySelectorAll('[name="patronomic"]');
-    if(!patronomic){
-        patronomic.value = "";
+    const patronymic = document.querySelector('input[name=patronymic]');
+    if(!patronymic){
+        patronymic.value = '';
     }
     const response = await fetch(frm.action, {
         method: frm.method,
