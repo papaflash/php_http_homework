@@ -5,10 +5,6 @@ const textBlock = document.getElementById("span_for_name");
 frm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const formData = new FormData(frm);
-    const patronymic = document.querySelector('input[name=patronymic]');
-    if(!patronymic){
-        patronymic.value = '';
-    }
     const response = await fetch(frm.action, {
         method: frm.method,
         body: formData,

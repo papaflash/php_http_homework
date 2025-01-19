@@ -158,13 +158,13 @@ $dadata = new Dadata($token, $secret);
 $dadata->init();
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
-    if(isset($_POST["name"]) && isset($_POST['surname'])) {
+    if($_POST["name"] !== "" && $_POST["surname"] !== "") {
         $result = $dadata->clean("name", $_POST['name'] . " " . $_POST['patronymic'] . " " . $_POST['surname']);
     }else {
         $result = "Не заполнены данные полей!";
     }
 } elseif ($_SERVER["REQUEST_METHOD"] === "GET") {
-    if(isset($_GET["name"]) && isset($_GET["surname"])) {
+    if($_GET["name"] !== "" && $_GET["surname"] !== "") {
         $result = $dadata->clean("name", $_GET["name"] . " " . $_GET["patronymic"] . " " . $_GET["surname"]);
     }else{
         $result = "Не заполнены данные параметров!";
