@@ -161,18 +161,17 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     if($_POST["name"] !== "" && $_POST["surname"] !== "") {
         $result = $dadata->clean("name", $_POST['name'] . " " . $_POST['patronymic'] . " " . $_POST['surname']);
     }else {
-        $result = "Не заполнены данные полей!";
+        $result = "Для стандартизации необходимо заполнить минимум два поля: Имя и Фамилия";
     }
 } elseif ($_SERVER["REQUEST_METHOD"] === "GET") {
     if($_GET["name"] !== "" && $_GET["surname"] !== "") {
         $result = $dadata->clean("name", $_GET["name"] . " " . $_GET["patronymic"] . " " . $_GET["surname"]);
     }else{
-        $result = "Не заполнены данные параметров!";
+        $result = "Для стандартизации необходимо заполнить минимум два поля: Имя и Фамилия";
     }
 }else{
     $result = "Обрабатываю только GET и POST запросы!";
 }
-
 
 echo '<pre>';
 print_r($result);
